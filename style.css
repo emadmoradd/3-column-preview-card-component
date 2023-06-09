@@ -1,0 +1,127 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: var(--light-gray);
+  align-items: center;
+  min-height: 100vh;
+  font-size: 15px;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: flex;
+  max-width: 70%;
+  margin: auto;
+}
+
+.col {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.info {
+  display: grid;
+  align-content: start;
+  gap: 1.5rem;
+}
+
+h3 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--light-gray);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  color: var(--transparent-white);
+}
+
+.col:first-child {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.col:first-child .btn {
+  color: var(--bright-orange);
+}
+
+.col:nth-child(2) {
+  background-color: var(--dark-cyan);
+}
+
+.col:nth-child(2) .btn {
+  color: var(--dark-cyan);
+}
+
+.col:last-child {
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+
+.col:last-child .btn {
+  color: var(--very-dark-cyan);
+}
+
+.btn {
+  border: 0;
+  border: 2px solid transparent;
+  width: fit-content;
+  background-color: var(--light-gray);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  border-radius: 100vw;
+  -webkit-border-radius: 100vw;
+  -moz-border-radius: 100vw;
+  -ms-border-radius: 100vw;
+  -o-border-radius: 100vw;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--light-gray) !important;
+  border: 2px solid var(--light-gray);
+}
+
+@media (max-width: 991px) {
+  .container {
+    margin-top: 1rem;
+    flex-direction: column;
+    max-width: 90%;
+  }
+  
+  footer {
+    margin: 1rem;
+  }
+}
+
+
+
